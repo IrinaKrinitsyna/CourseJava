@@ -32,16 +32,45 @@ public class Lecture {
         }
     }
 
+//    Упражнение 2:
+//
+//    Много раз Попросить пользователя вводить целые числа
+//
+//    Остановиться, когда сумма введенных чисел достигнет 42
+//
+//    Рассказать, сколько всего он ввел чисел
+//
+//    + Каков процент количества положительных чисел?
+//    + Чему равна сумма отрицательных чисел?
+
     public static void fortyTwo() {
         int sum = 0;
+        int sumNegative = 0;
+        int countPositive = 0;
+        int countTotal = 0;
         Scanner scanner = new Scanner(System.in);
 
         do {
             System.out.print("Введите число: ");
             int a = scanner.nextInt();
+
             sum += a;
+            countTotal++;
+
+            if (a > 0) {
+                countPositive++;
+            } else if (a < 0) {
+                sumNegative += a;
+            }
+
         } while (sum < 42);
 
-        System.out.print("Сумма ровна: " + sum);
+        double percentPositive = (countTotal == 0)
+                ? 0.0
+                : (double) countPositive * 100 / countTotal;
+
+        System.out.println("Сумма равна: " + sum);
+        System.out.printf("Процент положительных чисел: %.2f%%%n", percentPositive);
+        System.out.println("Сумма отрицательных чисел: " + sumNegative);
     }
 }
