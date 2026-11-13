@@ -6,3 +6,4 @@
 - Болты и гайки https://acmp.ru/index.asp?main=task&id_task=294
 - Два бандита https://acmp.ru/index.asp?main=task&id_task=33
 - Светофорчики https://acmp.ru/index.asp?main=task&id_task=124
+- Волосатый бизнес https://acmp.ru/index.asp?main=task&id_task=39
