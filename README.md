@@ -8,3 +8,4 @@
 - Светофорчики https://acmp.ru/index.asp?main=task&id_task=124
 - Волосатый бизнес https://acmp.ru/index.asp?main=task&id_task=39
 - Робот К-79 https://acmp.ru/index.asp?main=task&id_task=235
+- Байдарочный поход https://acmp.ru/index.asp?main=task&id_task=869
