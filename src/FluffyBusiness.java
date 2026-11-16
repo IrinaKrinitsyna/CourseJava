@@ -1,5 +1,7 @@
 // Волосатый бизнес https://acmp.ru/index.asp?main=task&id_task=39
 import java.io.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class FluffyBusiness {
     public static void main() {
@@ -9,15 +11,25 @@ public class FluffyBusiness {
 //        int[] hairCost = {5, 4, 3, 2, 1};
         int n = hairCost.length;
 
-        int[] maxC = new int[n + 1];
-        for (int i = n - 1; i >= 0; i--) {
+        int[] maxCosts = getTrendMaxPrices(hairCost);
+        long total = calculateTotal(hairCost, maxCosts);
+
+        System.out.println(total);
+    }
+
+    static int[] getTrendMaxPrices(int[] hairCost) {
+        int[] maxC = new int[hairCost.length + 1];
+        for (int i = hairCost.length - 1; i >= 0; i--) {
             maxC[i] = Math.max(hairCost[i], maxC[i + 1]);
         }
+        return maxC;
+    }
 
+    static long calculateTotal(int[] hairCost, int[] maxC) {
         long total = 0;
         int length = 1;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < hairCost.length; i++) {
             if (hairCost[i] >= maxC[i]) {
                 total += (long) length * hairCost[i];
                 length = 1;
@@ -25,8 +37,7 @@ public class FluffyBusiness {
                 length++;
             }
         }
-
-        System.out.println(total);
+        return total;
     }
 
 }
