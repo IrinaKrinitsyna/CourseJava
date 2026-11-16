@@ -13,7 +13,7 @@ public class Main
 
         Piece[] pieces = parsInput(listPieces);
         int blackCount = getblackCount(pieces);
-        double blackPercent =  (blackCount * 100.0) / pieces.length;
+        double blackPercent = getPersent(blackCount, pieces.length);
 
         System.out.println("Всего фигур: " + pieces.length);
         System.out.println("Чёрных фигур: " + blackCount + " ( " + blackPercent + "% )");
@@ -42,6 +42,10 @@ public class Main
         }
 
         return  blackCount;
+    }
+
+    public static double getPersent(int count,int length) {
+        return  (count * 100.0) / length;
     }
 
 }
